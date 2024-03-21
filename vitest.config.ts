@@ -4,8 +4,9 @@ import { defineConfig } from "vitest/config";
 export default defineConfig({
   test: {
     globals: true,
+    include: ["**/*.test.ts", "**/*.spec.ts"],
     coverage: {
-      exclude: ["node_modules", "test"],
+      exclude: ["node_modules", "tests"],
       provider: "v8",
     },
   },
